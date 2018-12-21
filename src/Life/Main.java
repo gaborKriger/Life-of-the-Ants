@@ -15,5 +15,17 @@ public class Main {
         Worker worker = new Worker();
         System.out.println("Worker name: " + worker.getName());
         System.out.println("Worker coordinate: " + worker.getCoordinate());
+
+        System.out.println();
+
+        Solider solider = new Solider();
+        System.out.println("Solider name: " + solider.getName());
+        System.out.println("Solider coordinate: " + solider.getCoordinate());
+
+        System.out.println();
+
+        Drones drones = new Drones();
+        System.out.println("Drones name: " + drones.getName());
+        System.out.println("Drones coordinate" + drones.getCoordinate());
     }
 }

@@ -20,7 +20,7 @@ public class Queen extends Ants {
         return matingMood;
     }
 
-    public void setMatingMood(boolean matingMood) {
+    private void setMatingMood(boolean matingMood) {
         this.matingMood = matingMood;
     }
 }
