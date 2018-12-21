@@ -27,5 +27,7 @@ public class Main {
         Drones drones = new Drones();
         System.out.println("Drones name: " + drones.getName());
         System.out.println("Drones coordinate" + drones.getCoordinate());
+        System.out.println("Drones mating with the queen: " + drones.isMatesWithTheQueen());
+        System.out.println("Drones mating time : " + drones.getMatingTime());
     }
 }
