@@ -1,8 +1,7 @@
 package Life.Creatures.Ant;
 
-import java.util.HashMap;
 
-public class Drones extends Ants implements Moving{
+public class Drones extends Ants {
     private boolean matesWithTheQueen;
     private int matingTime;
 
@@ -16,7 +15,7 @@ public class Drones extends Ants implements Moving{
         return matesWithTheQueen;
     }
 
-    public void setMatesWithTheQueen(boolean matesWithTheQueen) {
+    private void setMatesWithTheQueen(boolean matesWithTheQueen) {
         this.matesWithTheQueen = matesWithTheQueen;
     }
 
@@ -26,10 +25,5 @@ public class Drones extends Ants implements Moving{
 
     public void setMatingTime(int matingTime) {
         this.matingTime = matingTime;
-    }
-
-    @Override
-    public void moving(HashMap<String, Integer> coordinate) {
-        setCoordinate(coordinate);
     }
 }

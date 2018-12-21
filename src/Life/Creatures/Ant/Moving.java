@@ -1,7 +1,6 @@
 package Life.Creatures.Ant;
 
 import java.util.HashMap;
-import java.util.Map;
 
 interface Moving {
 
