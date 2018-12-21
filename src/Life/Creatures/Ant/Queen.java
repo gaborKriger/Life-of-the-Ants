@@ -9,6 +9,7 @@ public class Queen extends Ants {
 
     public Queen() {
         setMatingMood(false);
+        setName("Queen");
         Map<String, Integer> coordinate = new HashMap<>();
         coordinate.put("x", 0);
         coordinate.put("y", 0);
