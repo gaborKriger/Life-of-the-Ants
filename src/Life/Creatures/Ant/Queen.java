@@ -1,26 +1,23 @@
 package Life.Creatures.Ant;
 
-import java.util.HashMap;
-import java.util.Map;
+import Life.Creatures.Creatures;
 
-public class Queen extends Ants {
+
+public class Queen extends Creatures {
 
     private boolean matingMood;
 
     public Queen() {
-        setMatingMood(false);
-        setName("Queen");
-        Map<String, Integer> coordinate = new HashMap<>();
-        coordinate.put("x", 0);
-        coordinate.put("y", 0);
-        setCoordinate(coordinate);
+        super.setName("Queen");
+        super.setCoordinate(0,0);
+        this.setMatingMood(false);
     }
 
     public boolean isMatingMood() {
         return matingMood;
     }
 
-    private void setMatingMood(boolean matingMood) {
+    public void setMatingMood(boolean matingMood) {
         this.matingMood = matingMood;
     }
 }

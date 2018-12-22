@@ -1,21 +1,26 @@
 package Life.Creatures.Ant;
 
+import Life.Creatures.Creatures;
+import Life.Creatures.GenerateRandomCoordinate;
 
-public class Drones extends Ants {
+
+public class Drones extends Creatures {
+
     private boolean matesWithTheQueen;
     private int matingTime;
 
     public Drones() {
-        setName("Drones");
-        setCoordinate(getFirstRandomCoordinate());
-        setMatesWithTheQueen(false);
+        super.setName("Drones");
+        GenerateRandomCoordinate grc = new GenerateRandomCoordinate();
+        super.setCoordinate(grc.getRandomNumber(), grc.getRandomNumber());
+        this.setMatesWithTheQueen(false);
     }
 
     public boolean isMatesWithTheQueen() {
         return matesWithTheQueen;
     }
 
-    private void setMatesWithTheQueen(boolean matesWithTheQueen) {
+    public void setMatesWithTheQueen(boolean matesWithTheQueen) {
         this.matesWithTheQueen = matesWithTheQueen;
     }
 
