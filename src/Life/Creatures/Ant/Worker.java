@@ -1,17 +1,18 @@
 package Life.Creatures.Ant;
 
 import Life.Creatures.Creatures;
-import Life.Creatures.GenerateRandomCoordinate;
+import Life.Creatures.Move;
+
+import static Life.Creatures.GenerateRandomCoordinate.getRandomNumber;
 
 
-public class Worker extends Creatures {
+public class Worker extends Creatures implements Move {
 
     private boolean canMove;
 
     public Worker() {
         super.setName("Worker");
-        GenerateRandomCoordinate grc = new GenerateRandomCoordinate();
-        super.setCoordinate(grc.getRandomNumber(),grc.getRandomNumber());
+        super.setCoordinate(getRandomNumber(),getRandomNumber());
         this.setCanMove(true);
     }
 
@@ -21,5 +22,10 @@ public class Worker extends Creatures {
 
     public void setCanMove(boolean canMove) {
         this.canMove = canMove;
+    }
+
+    @Override
+    public void moving() {
+
     }
 }

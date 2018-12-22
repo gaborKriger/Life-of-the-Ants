@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         constructorTest();
+        soliderMoveTest();
     }
 
     private static void constructorTest() {
@@ -29,10 +30,13 @@ public class Main {
         System.out.println("Drone coordinate: " + drones.getCoordinate());
         System.out.println("Drone is mate with Queen: " + drones.isMatesWithTheQueen());
         System.out.println("Drone mating time: " + drones.getMatingTime());
+        System.out.println("Drone is can move: " + drones.isCanMove());
         System.out.println();
 
         Solider solider = new Solider();
         System.out.println("Solider name: " + solider.getName());
+        System.out.println("Solider coordinate: " + solider.getCoordinate());
+        solider.moving();
         System.out.println("Solider coordinate: " + solider.getCoordinate());
         System.out.println("Solider detect the intruder: " + solider.isDetectIntruder());
         System.out.println();
@@ -43,6 +47,14 @@ public class Main {
         System.out.println("Wasp is visible: " + wasp.isVisible());
         System.out.println();
 
+    }
+
+    private static void soliderMoveTest() {
+        Solider solider = new Solider();
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Solider coordinate: " + solider.getCoordinate());
+            solider.moving();
+        }
     }
 
 }

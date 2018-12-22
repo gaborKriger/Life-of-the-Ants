@@ -2,9 +2,11 @@ package Life.Creatures.Wasp;
 
 import Life.Creatures.Creatures;
 import Life.Creatures.GenerateRandomCoordinate;
+import Life.Creatures.Move;
 
 
-public class Wasp extends Creatures {
+public class Wasp extends Creatures implements Move {
+
     private boolean Visible;
 
     public Wasp() {
@@ -20,5 +22,10 @@ public class Wasp extends Creatures {
 
     public void setVisible(boolean visible) {
         Visible = visible;
+    }
+
+    @Override
+    public void moving() {
+
     }
 }

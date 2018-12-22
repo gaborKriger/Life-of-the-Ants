@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class Creatures {
+public abstract class Creatures {
 
     private String name;
     private Map<String, Integer> coordinate;

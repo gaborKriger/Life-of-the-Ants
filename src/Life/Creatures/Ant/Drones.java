@@ -1,19 +1,22 @@
 package Life.Creatures.Ant;
 
 import Life.Creatures.Creatures;
-import Life.Creatures.GenerateRandomCoordinate;
+import Life.Creatures.Move;
+
+import static Life.Creatures.GenerateRandomCoordinate.getRandomNumber;
 
 
-public class Drones extends Creatures {
+public class Drones extends Creatures implements Move {
 
     private boolean matesWithTheQueen;
     private int matingTime;
+    private boolean canMove;
 
     public Drones() {
         super.setName("Drones");
-        GenerateRandomCoordinate grc = new GenerateRandomCoordinate();
-        super.setCoordinate(grc.getRandomNumber(), grc.getRandomNumber());
+        super.setCoordinate(getRandomNumber(), getRandomNumber());
         this.setMatesWithTheQueen(false);
+        this.setCanMove(true);
     }
 
     public boolean isMatesWithTheQueen() {
@@ -30,5 +33,18 @@ public class Drones extends Creatures {
 
     public void setMatingTime(int matingTime) {
         this.matingTime = matingTime;
+    }
+
+    public boolean isCanMove() {
+        return canMove;
+    }
+
+    public void setCanMove(boolean canMove) {
+        this.canMove = canMove;
+    }
+
+    @Override
+    public void moving() {
+
     }
 }
