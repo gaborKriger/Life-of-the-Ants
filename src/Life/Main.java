@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         constructorTest();
+        workerMoveTest();
         soliderMoveTest();
     }
 
@@ -49,12 +50,22 @@ public class Main {
 
     }
 
+    private static void workerMoveTest() {
+        Worker worker = new Worker();
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Worker last direction move: " + worker.getLastDirectionMove());
+            worker.moving();
+        }
+        System.out.println();
+    }
+
     private static void soliderMoveTest() {
         Solider solider = new Solider();
         for (int i = 0; i < 100; i++) {
             System.out.println("Solider coordinate: " + solider.getCoordinate());
             solider.moving();
         }
+        System.out.println();
     }
 
 }

@@ -12,7 +12,7 @@ public class GenerateRandomCoordinate {
         return random.nextInt((max - min) + 1) + min;
     }
 
-    public static String getRandomDirection() {
+    public static char getRandomDirection() {
         int max = 4;
         int min = 1;
 
@@ -20,13 +20,13 @@ public class GenerateRandomCoordinate {
         int randomNumber = random.nextInt((max - min) + 1) + min;
 
         if (randomNumber == 1) {
-            return "N";
+            return 'N';
         } else if (randomNumber == 2) {
-            return "E";
+            return 'E';
         } else if (randomNumber == 3) {
-            return "W";
+            return 'W';
         } else {
-            return "S";
+            return 'S';
         }
     }
 }

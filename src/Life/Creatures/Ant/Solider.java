@@ -27,17 +27,17 @@ public class Solider extends Creatures implements Move {
 
     @Override
     public void moving() {
-        String direction = getRandomDirection();
+        char direction = getRandomDirection();
         int x = super.getCoordinate().get("x");
         int y = super.getCoordinate().get("y");
 
-        if (direction.equals("N") && ((super.getCoordinate().get("y") + 1) <= 100))  {
+        if ((direction == 'N') && ((super.getCoordinate().get("y") + 1) <= 100))  {
             super.setCoordinate(x, y + 1);
-        } else if (direction.equals("E") && ((super.getCoordinate().get("x") + 1) <= 100)) {
+        } else if ((direction == 'E') && ((super.getCoordinate().get("x") + 1) <= 100)) {
             super.setCoordinate(x + 1, y);
-        } else if (direction.equals("W") && ((super.getCoordinate().get("x") -1) >= -100)) {
+        } else if ((direction == 'W') && ((super.getCoordinate().get("x") -1) >= -100)) {
             super.setCoordinate(x - 1 ,y);
-        }else if (direction.equals("S") && ((super.getCoordinate().get("y") -1) >= -100)) {
+        }else if ((direction == 'S') && ((super.getCoordinate().get("y") -1) >= -100)) {
             super.setCoordinate(x,y - 1);
         } else {
             moving();
