@@ -1,13 +1,11 @@
 package Life.Creatures;
 
 import java.util.HashMap;
-import java.util.Map;
-
 
 public abstract class Creatures {
 
     private String name;
-    private Map<String, Integer> coordinate;
+    private HashMap<Character, Integer> coordinate;
 
     public String getName() {
         return name;
@@ -17,14 +15,17 @@ public abstract class Creatures {
         this.name = name;
     }
 
-    public Map<String, Integer> getCoordinate() {
+    public HashMap<Character, Integer> getCoordinate() {
         return coordinate;
     }
 
     public void setCoordinate(int x, int y) {
-        Map<String, Integer> coordinate = new HashMap<>();
-        coordinate.put("x", x);
-        coordinate.put("y", y);
-        this.coordinate = coordinate;
+        HashMap<Character, Integer> temporaryStorage = new HashMap<>();
+        temporaryStorage.put('x',x);
+        temporaryStorage.put('y',y);
+        this.coordinate = temporaryStorage;
     }
+
+    public abstract void prepareNextSecond();
+
 }
