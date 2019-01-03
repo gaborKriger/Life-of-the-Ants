@@ -27,4 +27,9 @@ public class MyRandom {
         }
     }
 
+    public static boolean tenPercentChance() {
+        int number = randomNumberBetween(1,10);
+        return number <= 1;
+    }
+
 }

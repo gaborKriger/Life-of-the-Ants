@@ -1,6 +1,7 @@
 package Life.Creatures.Ants;
 
 import Life.Creatures.Creatures;
+import Life.Life;
 
 import static Life.Util.MyRandom.randomBoolean;
 
@@ -11,13 +12,12 @@ public class Queen extends Creatures {
     private int matingSpirit;
 
     public Queen() {
-        super.setName("Ant - Queen");
-        super.setCoordinate(0,0);
-        this.matingMood = randomBoolean();
+        setName("Ant - Queen");
+        setCoordinate(0,0);
+        matingMood = randomBoolean();
     }
 
     @Override
-    public void prepareNextSecond() {
-
+    public void prepareNextSecond(Life life) {
     }
 }

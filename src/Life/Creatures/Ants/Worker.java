@@ -1,6 +1,7 @@
 package Life.Creatures.Ants;
 
 import Life.Creatures.Creatures;
+import Life.Life;
 
 import static Life.Util.MyRandom.randomNumberBetween;
 
@@ -10,12 +11,12 @@ public class Worker extends Creatures {
     private boolean canMove;
 
     public Worker() {
-        super.setName("Worker " + counter++);
-        super.setCoordinate(randomNumberBetween(-99,99),randomNumberBetween(-99,99));
+        setName("Worker " + counter++);
+        setCoordinate(randomNumberBetween(-99,99),randomNumberBetween(-99,99));
     }
 
     @Override
-    public void prepareNextSecond() {
-
+    public void prepareNextSecond(Life life) {
+        canMove = life.isAntCanMove();
     }
 }

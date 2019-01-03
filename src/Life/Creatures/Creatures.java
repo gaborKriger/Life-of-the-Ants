@@ -1,5 +1,7 @@
 package Life.Creatures;
 
+import Life.Life;
+
 import java.util.HashMap;
 
 public abstract class Creatures {
@@ -26,6 +28,6 @@ public abstract class Creatures {
         this.coordinate = temporaryStorage;
     }
 
-    public abstract void prepareNextSecond();
+    public abstract void prepareNextSecond(Life life);
 
 }

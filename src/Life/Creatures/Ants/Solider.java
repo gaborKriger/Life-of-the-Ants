@@ -1,6 +1,7 @@
 package Life.Creatures.Ants;
 
 import Life.Creatures.Creatures;
+import Life.Life;
 
 import static Life.Util.MyRandom.randomDirections;
 import static Life.Util.MyRandom.randomNumberBetween;
@@ -12,13 +13,13 @@ public class Solider extends Creatures {
     private char lastMove;
 
     public Solider() {
-        super.setName("Solider " + counter++);
-        super.setCoordinate(randomNumberBetween(-99,99),randomNumberBetween(-99,99));
-        this.lastMove = randomDirections();
+        setName("Solider " + counter++);
+        setCoordinate(randomNumberBetween(-99,99),randomNumberBetween(-99,99));
+        lastMove = randomDirections();
     }
 
     @Override
-    public void prepareNextSecond() {
+    public void prepareNextSecond(Life life) {
 
     }
 }

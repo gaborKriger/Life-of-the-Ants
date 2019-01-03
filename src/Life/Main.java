@@ -10,10 +10,10 @@ public class Main {
 
     private static void createCreatures(Life life) {
         life.addCreatures(new Queen());
+        life.addCreatures(new Drones());
         for (int i = 0; i < 5; i++) {
             life.addCreatures(new Solider());
             life.addCreatures(new Worker());
-            life.addCreatures(new Drones());
         }
         life.addCreatures(new Wasp());
     }
@@ -22,6 +22,7 @@ public class Main {
 
         Life life = new Life();
         createCreatures(life);
+        life.simulateLife();
     }
 
 }
